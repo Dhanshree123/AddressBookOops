@@ -14,15 +14,17 @@ public class AddressBook {
 	  
 		Scanner sc =new Scanner(System.in);
 		
-	      public void deleteContactDetails(String firstName) {
-	         int pos=0;
-	    		
-	    	 for(int i=0;i<list.size();i++) {
-	    			if(list.get(i).getFirstName().equals(firstName))
-	    				pos = i;
-	    	 }
-	    	 list.remove(pos);
-	  	  }
+		public AddressBookContacts create(String firstName,String lastName,String address,
+				  String city,String state,int zip,String ph_no,String email ) {
+			  
+			  AddressBookContacts contact = new AddressBookContacts(firstName,lastName,address,city,state,zip,ph_no,email );
+			  return contact;
+		  }
+		  
+		  
+		  public void addContactDetails(AddressBookContacts contact) {
+			  list.add(contact);
+		  }
 
 }
 
