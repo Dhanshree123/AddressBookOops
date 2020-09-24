@@ -3,6 +3,8 @@ package com.blz.AddressBook;
 import java.util.*;
 
 public class AddressBook {
+	public static Map<String,AddressBook> hm= new HashMap<String, AddressBook>(); 
+	String addressBookName;
 	
 	  ArrayList<AddressBookContacts> list;
 	  
@@ -14,18 +16,11 @@ public class AddressBook {
 	  
 		Scanner sc =new Scanner(System.in);
 		
-		public AddressBookContacts create(String firstName,String lastName,String address,
-				  String city,String state,int zip,String ph_no,String email ) {
-			  
-			  AddressBookContacts contact = new AddressBookContacts(firstName,lastName,address,city,state,zip,ph_no,email );
-			  return contact;
-		  }
-		  
-		  
-		  public void addContactDetails(AddressBookContacts contact) {
-			  list.add(contact);
-		  }
-
+		public AddressBook(String addressBookName) {
+			list=new ArrayList<AddressBookContacts>();
+			this.addressBookName=addressBookName;
+			
+		}
 }
 
 
