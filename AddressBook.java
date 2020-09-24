@@ -8,6 +8,7 @@ public class AddressBook {
 	  
 	  public AddressBook( )
 	  {
+		  list = new ArrayList<AddressBookContacts>();
 		  
 	  }
 
@@ -17,6 +18,12 @@ public class AddressBook {
 		  AddressBookContacts contact = new AddressBookContacts(firstName,lastName,address,city,state,zip,ph_no,email );
 		  return contact;
 	  }
+	  
+	  
+	  public void addContactDetails(AddressBookContacts contact) {
+		  list.add(contact);
+	  }
+	  
 
 }
 
