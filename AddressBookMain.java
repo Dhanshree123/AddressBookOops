@@ -12,9 +12,9 @@ public class AddressBookMain {
 		int zip;
 		
 		AddressBook a = new AddressBook();
-		System.out.println("Enter the first name to edit");
+		System.out.println("Enter the first name to Delete");
 		 firstName = sc.next();
-		 a.editContactDetails(firstName);
+		 a.deleteContactDetails(firstName);
 		 System.out.println("Contact Details Editted");
 		 
 	}
